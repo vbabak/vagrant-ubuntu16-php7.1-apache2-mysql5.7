@@ -52,7 +52,7 @@ Vagrant.configure("2") do |config|
     a2enmod rewrite
     apt install -y sendmail
     debconf-set-selections <<< 'mysql-server mysql-server/root_password password 111'
-	debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password 111'
+    debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password 111'
     apt install -y mysql-server
     ln -s /var/www/vagrant/configs/apache/apache.projects.conf /etc/apache2/sites-available/apache.projects.conf
     a2ensite apache.projects
