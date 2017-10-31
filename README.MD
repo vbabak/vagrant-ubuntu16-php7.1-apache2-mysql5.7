@@ -29,7 +29,7 @@ and add line
 
 ## That's it!
 
-Open in our browser
+Open in your browser
 
 ```
 http://phptest
