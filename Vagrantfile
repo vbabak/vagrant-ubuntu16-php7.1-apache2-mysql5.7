@@ -5,7 +5,7 @@
 Vagrant.configure("2") do |config|
   
   config.vm.box = "bento/ubuntu-16.04" # recommended by Hashicorp
-  config.vm.box_check_update = false
+  config.vm.box_check_update = true
 
   config.vm.network "forwarded_port", guest: 80, host: 8070
   config.vm.network "forwarded_port", guest: 3306, host: 3316
@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
-  	  vb.cpus = 2
+      vb.cpus = 2
   end
 
   config.vm.provision "shell", inline: <<-SHELL
